@@ -1,0 +1,43 @@
+
+
+	
+<template name= "navigation">
+	<div class="navbar">
+	    <ul>
+	      	<li><a href="{{pathFor route='home'}}">Home</a></li>
+		    {{#if isInRole 'employee'}}
+		        <li><a href="{{pathFor route='main'}}">To-do List</a></li>
+		       <li> <a href="{{pathFor route='UsefulInfo'}}">Useful Information</a></li>
+		    {{/if}}
+		    {{#if isInRole 'admin'}}
+		        <li><a href="{{pathFor route='main'}}">To-do List</a></li>
+		        <li><a href="{{pathFor route='UsefulInfo'}}">Useful Information</a></li>
+		    {{/if}}
+		</ul>
+	</div>
+</template>
+
+
+<template name="hdrftr">
+	<div class = "heads">
+	    <img src="http://complit.fas.harvard.edu/profiles/openscholar/themes/hwpi_basetheme/images/harvard-logo.png" align="middle"/>
+	    <img src="http://static.hwpi.harvard.edu/files/styles/os_files_xxlarge/public/complit/files/banner_department_of_comparative_literature.jpg?m=1443549691&itok=hgFFPlFb" />
+    </div>
+   
+    <h2 > {{>navigation}} </h2>
+
+    {{> yield}}
+
+    <div class="footers">
+
+    <hr />
+	   <img src="http://static.hwpi.harvard.edu/files/styles/os_files_xxlarge/public/complit/files/comp_lit_logo_blk.png?m=1393429020&itok=YGrMF-2l"/>
+	    <p>
+		    Department of Comparative Literature <br>
+		    16 Quincy Street <br>
+		    Dana-Palmer House <br>
+		    Cambridge, MA 02138 <br>
+		    Phone: 617-495-1900 <br>
+	    </p>
+	</div>
+</template>

@@ -1,0 +1,104 @@
+<template name="UsefulInfo">
+  <head>
+    <title>Useful Information</title>
+    <link type="text/css" rel="help" href="nav.html" />
+  </head>
+
+  <body>
+    <div class="container"> 
+    <header>
+    <h1> Useful Information</h1>
+    </header>
+    <div class="UsefulContainer">
+    <ul>
+      <li> {{>dropdown name='Websites'}}</li>
+      <li>{{>dropdown name='Food'}}</li>
+      <li> {{>dropdown name='Tasks'}}</li>
+    </ul>
+    </div>
+    <ul>
+      <li>{{>loginButtons}}</li>
+    </ul>
+    </div>
+  </body>
+</template>
+
+<template name="dropdown">
+    {{> Template.dynamic template=templateName data=templateData}}
+</template>
+
+<template name="dropdown_Websites">
+    {{#if open}}
+        <button class="invisible btn">Frequently Used Websites</button>
+        <ul class="dropdown-menu x">
+            <li> Doodle: mignotte@fas.harvard.edu / password: complit </li>
+             <li>Website photo galleries: http://www.cincopa.com/ login: mignotte@fas.harvard.edu password: Harvard16</li>
+            <li>Facebook page for the Comp Lit Dpt. mignotte@fas.harvard.edu password: Harvard16</li>
+            <li><a href="https://docs.google.com/spreadsheets/d/1dNW71pc2wG2_3-9z-Y5YefLxDVrM8rgG7kPzClYwnq8/edit#gid=1716407045">Faculty Office Hours</a></li>
+            <li>IT service request: either via email: ithelp@harvard.edu or phone: 617-495-9000</li>
+            <li>Sype info: skype name is: complitharvard - skype password: complit16</li>
+            <li><a href="https://tools.usps.com/go/ZipLookupAction_input">Postal Code Lookup</a></li>
+            <li>Lucidpress: login: complit@fas.harvard.edu  password: Literature/12 (CASE SENSITIVE)
+            </li>
+            <li> Mailchimp:  login: HarvardComplit password: Literature/12 (CASE SENSITIVE)
+            </li>
+            <li>
+            <a href= 'http://app.validator.pro'>HTML Validator Pro:</a> Use to check for broken links and such 
+            </li>
+             <li>Look for events at  CGIS, RLL, English, Hist and Lit, NELC, CES department websites as well as <a href= "http://artsandhumanities.fas.harvard.edu/"> Arts and Humanities</a>, <a href= "http://www.harvard.edu/events"> Harvard Events,</a>, <a href= "http://www.bu.edu/ipr/program/"> BU IPR program</a> 
+             </li>
+        </ul>
+    {{else}}
+        <button class="btn">Frequently Used Websites</button>
+    {{/if}}
+</template>
+
+<template name="dropdown_Food">
+    {{#if open}}
+        <button class="invisible btn">Food Ordering Instructions</button>
+        <ul class="dropdown-menu x">
+            <li>Order coffee/cups when running low: phone listed on cups holder, account name: Harva-Dana (cups: box of 1000 compostable 10 oz+ pods of: 4 french roast, 4 espresso, 2 small village (1 decaf + 1 reg) + 5x50 compostable wine cups)</li>
+            <li>Oggi pizza orders: text order to 617-446-3133
+            or order <a href= "http://www.mixmenu.com/MA/Cambridge/PIZZA/GOURMET/oggi-gourmet/full/54-460909.htm> here"> here </a> 
+            <p>(617) 492-6444: Get large pizzas:  default order: Get 2 of the specials,  one or two margheritas, if meat needed because special is vegetarian: 1 mushroom and 1 chicken, or 1 spicy sausage, if veggie needed: 1 eggplant, 1 margarita, 1 mushroom. login: isaurem@hotmail.com password: boston. please include $7 tip + always request plates and napkins in comments + make sure you have the right date and time, the default order is immediate + paper plates and napkins. 
+            </p>
+            </li>
+        </ul>
+    {{else}}
+        <button class="btn">Food Ordering Instructions</button>
+    {{/if}}
+</template>
+
+<template name="dropdown_Tasks">
+    {{#if open}}
+        <button class="invisible btn">Everyday Tasks</button>
+        <ul class="dropdown-menu x">
+            <p> On a daily basis: </p>
+            <li>Refill paper in the photocopy machine + under the cabinet (3 in reserve)</li>
+            <li>Wipe down kitchen counter + coffee drip + refill coffee machine + refill coffee cups + wood stirrers + put away clean dishes</li>
+            <li>Check milk and buy new one when low: Horizon 2% (with Isaure’s credit card).</li>
+            <li>Check posters on the boards + front door for past events </li>
+            <li>Forward the mail to be forwarded (in the cabinet under the mail table) </li>
+            <li>Distribute the mail as soon as it is available</li>
+            <li>Tidy up coffee table here plus upstairs</li>
+            <li>Move completed tasks to the “Completed” section below</li>
+            <li>Clean white board with spray in classroom (when no class is in session) </li>
+            <li>Get through a little bit of junk mail if you run out of work </li>
+            <li>Tell Isaure when we are running low on cups or printing paper </li>
+            <li>Lost and Found goes to Yard Ops in the basement of Weld Hall in the yard</li>
+        </ul>
+    {{else}}
+        <button class="btn">Everyday Tasks</button>
+    {{/if}}
+</template>
+
+
+
+
+
+
+
+
+
+
+

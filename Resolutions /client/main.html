@@ -1,0 +1,67 @@
+
+
+<template name="main">
+  <head>
+    <title>Complit To-do List</title>
+    <link type="text/css" rel="help" href="nav.html" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1> To-do List</h1>
+
+        <label class="hide-finished">
+          <input type="checkbox" checked="{{hideFinished}}">
+          Hide Finished Tasks
+
+        </label>
+        {{#if isInRole 'admin'}}
+        <form class="new-resolution">
+            <input type="text" name="title" placeholder="New Tasks">
+            <input type="submit" value="Submit">
+        </form>
+        {{/if}}
+
+      </header>
+      <ul>
+        {{#each resolutions}} 
+          {{> resolution}}
+        {{/ each}}
+      </ul>
+      <ul>
+      <li>{{>loginButtons}}</li>
+      </ul>
+    </div>
+  </body>
+</template>
+
+<template name="home">
+    <head>
+        <title> Home Page </title>
+    </head>
+    
+    <body>
+      <div class="container">
+        <header>
+          <h1>Welcome to the Harvard Comparative Literature To-Do List</h1>
+          <img style="center" src="http://www.mtruant.com/img/projects/photos/inst/hvd_danapalmer/2.jpg"/>
+        </header>
+    
+        <div class ="try">
+          <form class="login">
+            {{>loginButtons}}     
+          </form>
+        </div>
+      </div>
+    </body>
+</template>
+
+
+
+
+
+
+
+
+
